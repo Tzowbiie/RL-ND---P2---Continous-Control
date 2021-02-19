@@ -1,4 +1,3 @@
-# RL-ND_P2_Continous-Control
 
 [//]: # (Image References)
 
