@@ -199,9 +199,7 @@ Once all of the various components of the algorithm were in place, the agent was
 
 The graph below shows the final results. The best performing agent was able to solve the environment starting with the 80th episode, with a top mean score of 39.3 in the 79th episode. The complete set of results and steps can be found in [this notebook](Continuous_Control.ipynb).
 
-<img src="result.png" width="70%" align="top-left" alt="" title="Results Graph" />
-
-<img src="assets/output.png" width="100%" align="top-left" alt="" title="Final output" />
+<img src="result1.png" width="70%" align="top-left" alt="" title="Results Graph" />
 
 ### Distributed Training
 
