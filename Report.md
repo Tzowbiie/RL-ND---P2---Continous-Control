@@ -195,9 +195,9 @@ Since the training takes several hours and the Udacity Workspace Envirnoment ten
 
 ##### &nbsp;
 
-# Hyperparameters
+#### Hyperparameters
 
-## Networks
+##### Networks
 
 In [here](https://github.com/Tzowbiie/RL-ND_P2_Continous-Control/blob/main/model.py#L15), you can find the (almost similar) architectures of the Actor and the Critic :
 - input_size = state_size = 33
@@ -205,26 +205,26 @@ In [here](https://github.com/Tzowbiie/RL-ND_P2_Continous-Control/blob/main/model
 - ReLu activation function was used between fc1 and fc2
 - A Batch Normalization was used between the output of fc1 and its activation
 
-## Agent's hyperparameters
+##### Agent's hyperparameters
 Final choice of the hyperparameters was :
-
-- `BUFFER_SIZE` = int(1e6)   # replay buffer size
-- `BATCH_SIZE` = 128         # minibatch size
-- `GAMMA` = 0.99             # discount factor
-- `TAU` = 1e-3               # for soft update of target parameters
-- `LR_ACTOR` = 1e-3         # learning rate of the actor
-- `LR_CRITIC` = 1e-3        # learning rate of the critic
-- `WEIGHT_DECAY` = 0        # L2 weight decay
-- `LEARN_EVERY` = 20         # learning timestep interval
-- `LEARN_NUM` = 10           # number of learning passes
-- `OU_SIGMA` = 0.2           # Ornstein-Uhlenbeck noise parameter
-- `OU_THETA` = 0.15          # Ornstein-Uhlenbeck noise parameter
-- `EPSILON` = 1.0            # explore->exploit noise process added to act step
-- `EPSILON_DECAY` = 1e-6     # decay rate for noise process
-
+```Python
+BUFFER_SIZE = int(1e6)  # replay buffer size
+BATCH_SIZE = 128        # minibatch size
+GAMMA = 0.99            # discount factor
+TAU = 1e-3              # for soft update of target parameters
+LR_ACTOR = 1e-3         # learning rate of the actor
+LR_CRITIC = 1e-3        # learning rate of the critic
+WEIGHT_DECAY = 0        # L2 weight decay
+LEARN_EVERY = 20        # learning timestep interval
+LEARN_NUM = 10          # number of learning passes
+OU_SIGMA = 0.2          # Ornstein-Uhlenbeck noise parameter
+OU_THETA = 0.15         # Ornstein-Uhlenbeck noise parameter
+EPSILON = 1.0           # explore->exploit noise process added to act step
+EPSILON_DECAY = 1e-6    # decay rate for noise process
+```
 ##### &nbsp;
 
-### 4. Results
+### Results
 Once all of the various components of the algorithm were in place, the agent was able to solve the 20 agent Reacher environment. Again, the performance goal is an average reward of at least +30 over 100 episodes, and over all 20 agents.
 
 <img src="result1.png" width="70%" align="top-left" alt="" title="Results Graph" />
