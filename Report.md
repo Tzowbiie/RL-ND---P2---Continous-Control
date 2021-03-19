@@ -231,6 +231,18 @@ Once all of the various components of the algorithm were in place, the agent was
 
 The graph shows that after 20, 50, 70 and 100 epsisodes the training was interrupted and continued after reloading the network's data.
 
+<img src="solved.png" width="70%" align="top-left" alt="" title="Results Graph" />
+
+The Environment is solved after 113 episodes.
+
+### 6. Future ideas
+
+Testing another algorithm such as Trust Region Policy Optimization (TRPO), Proximal Policy Optimization (PPO), or Distributed Distributional Deterministic Policy Gradients (D4PG) would be more efficient.
+
+Another idea woud be to add `prioritized experience replay` — Rather than selecting experience tuples randomly, prioritized replay selects experiences based on a priority value that is correlated with the magnitude of error. This can improve learning by increasing the probability that rare and important experience vectors are sampled.
+
+##### &nbsp;
+
 ### Distributed Training
 
 For this project, we will provide you with two separate versions of the Unity environment:
