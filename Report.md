@@ -192,6 +192,36 @@ The implementation of the replay buffer can be found [here](https://github.com/T
 #### Continue Training
 
 Since the training takes several hours and the Udacity Workspace Envirnoment tends to idle after several minutes of inactivity I implemented a Training break and continue solution. Every 5 episodes the parameters of the actor and critics neural network, loss and training scores are saved into a file. To continue the training these parameters are loaded.
+
+##### &nbsp;
+
+# Hyperparameters
+
+## Networks
+
+In [here](https://github.com/Tzowbiie/RL-ND_P2_Continous-Control/blob/main/model.py#L15), you can find the (almost similar) architectures of the Actor and the Critic :
+- input_size = state_size = 33
+- 2 hidden fully-connected layers with 400 and 300 nodes
+- ReLu activation function was used between fc1 and fc2
+- A Batch Normalization was used between the output of fc1 and its activation
+
+## Agent's hyperparameters
+Final choice of the hyperparameters was :
+
+- `BUFFER_SIZE` = int(1e6)   # replay buffer size
+- `BATCH_SIZE` = 128         # minibatch size
+- `GAMMA` = 0.99             # discount factor
+- `TAU` = 1e-3               # for soft update of target parameters
+- `LR_ACTOR` = 1e-3         # learning rate of the actor
+- `LR_CRITIC` = 1e-3        # learning rate of the critic
+- `WEIGHT_DECAY` = 0        # L2 weight decay
+- `LEARN_EVERY` = 20         # learning timestep interval
+- `LEARN_NUM` = 10           # number of learning passes
+- `OU_SIGMA` = 0.2           # Ornstein-Uhlenbeck noise parameter
+- `OU_THETA` = 0.15          # Ornstein-Uhlenbeck noise parameter
+- `EPSILON` = 1.0            # explore->exploit noise process added to act step
+- `EPSILON_DECAY` = 1e-6     # decay rate for noise process
+
 ##### &nbsp;
 
 ### 4. Results
