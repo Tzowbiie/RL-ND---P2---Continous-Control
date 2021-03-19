@@ -195,9 +195,9 @@ Since the training takes several hours and the Udacity Workspace Envirnoment ten
 
 ##### &nbsp;
 
-#### Hyperparameters
+### 4. Hyperparameters
 
-##### Networks
+#### Networks
 
 In [here](https://github.com/Tzowbiie/RL-ND_P2_Continous-Control/blob/main/model.py#L15), you can find the (almost similar) architectures of the Actor and the Critic :
 - input_size = state_size = 33
@@ -205,7 +205,7 @@ In [here](https://github.com/Tzowbiie/RL-ND_P2_Continous-Control/blob/main/model
 - ReLu activation function was used between fc1 and fc2
 - A Batch Normalization was used between the output of fc1 and its activation
 
-##### Agent's hyperparameters
+#### Agent's hyperparameters
 Final choice of the hyperparameters was :
 ```Python
 BUFFER_SIZE = int(1e6)  # replay buffer size
@@ -224,7 +224,7 @@ EPSILON_DECAY = 1e-6    # decay rate for noise process
 ```
 ##### &nbsp;
 
-### Results
+### 5. Results
 Once all of the various components of the algorithm were in place, the agent was able to solve the 20 agent Reacher environment. Again, the performance goal is an average reward of at least +30 over 100 episodes, and over all 20 agents.
 
 <img src="result1.png" width="70%" align="top-left" alt="" title="Results Graph" />
